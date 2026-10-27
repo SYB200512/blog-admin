@@ -4,6 +4,8 @@ import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
   plugins: [vue()],
+  // 部署在子路径 /admin 下，资源统一以 /admin/ 为前缀，与 nginx location 对应
+  base: '/admin/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
@@ -21,7 +23,5 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    // 相对路径，保证部署在子路径 /admin 下也能正确加载资源
-    base: './',
   },
 })
