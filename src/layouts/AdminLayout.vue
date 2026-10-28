@@ -32,6 +32,10 @@
           <el-icon><ChatDotRound /></el-icon>
           <span>评论管理</span>
         </el-menu-item>
+        <el-menu-item index="/images">
+          <el-icon><Picture /></el-icon>
+          <span>图片管理</span>
+        </el-menu-item>
       </el-menu>
     </el-aside>
 

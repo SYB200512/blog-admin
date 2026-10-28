@@ -21,6 +21,7 @@ const routes = [
       { path: 'categories', name: 'categoryManage', component: () => import('@/views/CategoryManage.vue'), meta: { title: '分类管理' } },
       { path: 'tags', name: 'tagManage', component: () => import('@/views/TagManage.vue'), meta: { title: '标签管理' } },
       { path: 'comments', name: 'commentManage', component: () => import('@/views/CommentManage.vue'), meta: { title: '评论管理' } },
+      { path: 'images', name: 'imageManage', component: () => import('@/views/ImageManage.vue'), meta: { title: '图片管理' } },
     ],
   },
   { path: '/:pathMatch(.*)*', redirect: '/dashboard' },
