@@ -9,3 +9,8 @@ export function login(data) {
 export function getProfile() {
   return request.get('/auth/profile')
 }
+
+// 退出登录：服务端删除当前设备的 refresh 会话并清 Cookie
+export function logout() {
+  return request.post('/auth/logout')
+}

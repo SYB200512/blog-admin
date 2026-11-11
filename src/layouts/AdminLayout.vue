@@ -81,7 +81,7 @@ const userStore = useUserStore()
 const handleCommand = async (command) => {
   if (command === 'logout') {
     await ElMessageBox.confirm('确定要退出登录吗？', '提示', { type: 'warning' })
-    userStore.logout()
+    await userStore.logout()
     router.push('/login')
   }
 }
